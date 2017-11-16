@@ -57,7 +57,7 @@ public class TestStudent {
 		assertFalse(this.student.isRegisteredFor("Student", "Test", 2017));
 	}
 	
-	//base case for submit hw
+	//base case for submithw
 	@Test
 	public void testSubmitHW() {
 		this.admin.createClass("ECS161", 2017, "Instructor", 15);

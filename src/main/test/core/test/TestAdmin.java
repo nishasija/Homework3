@@ -34,6 +34,7 @@ public class TestAdmin {
         assertFalse(this.admin.classExists("Test", 2016));
     }
     
+    //testing for the unique className & year combination 
     @Test
     public void testUnique() {
     		this.admin.createClass("ECS161", 2017, "Instructor", 15);
@@ -41,6 +42,7 @@ public class TestAdmin {
     		assertEquals("Instructor", this.admin.getClassInstructor("ECS161", 2017));
     }
     
+    //testing for course limit for instructor 
     @Test
     public void instructorCourseLimit() {
         this.admin.createClass("Test", 2017, "Instructor", 15);
@@ -56,6 +58,7 @@ public class TestAdmin {
     		assertFalse(this.admin.classExists("Test3", 2017));
     }
     
+    //testing for class capacity 
     @Test
     public void invalidClassCapacity() {
 		this.admin.changeCapacity("Test", 2017, 2);

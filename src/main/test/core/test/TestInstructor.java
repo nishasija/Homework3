@@ -70,7 +70,7 @@ public class TestInstructor {
 		this.student.registerForClass("Student", "ECS161", 2017);
     		this.instructor.addHomework("Instructor", "ECS161", 2017, "HW1");
     		this.student.submitHomework("Student", "HW1", "answer", "ECS161", 2017);
-    		this.instructor.assignGrade("Instructor1", "ECS161", 2017, "HW1", "Nishtha", 90);
+    		this.instructor.assignGrade("Instructor1", "ECS161", 2017, "HW1", "Student", 90);
     		assertEquals(new Integer(90), this.instructor.getGrade("ECS161", 2017, "HW1", "Student"));
     }
     
