@@ -42,7 +42,7 @@ public class TestAdmin {
     		assertEquals("Instructor", this.admin.getClassInstructor("ECS161", 2017));
     }
     
-    //testing for course limit for instructor 
+    //testing for valid course limit for instructor 
     @Test
     public void instructorCourseLimit() {
         this.admin.createClass("Test", 2017, "Instructor", 15);
@@ -50,6 +50,7 @@ public class TestAdmin {
         assertTrue(this.admin.classExists("Test1", 2017));
     }
     
+    //testing for invalid course limit for instructor
     @Test
     public void instructorCourseLimit2() {
     		this.admin.createClass("Test", 2017, "Instructor", 15);
@@ -99,6 +100,7 @@ public class TestAdmin {
 		assertEquals(15,this.admin.getClassCapacity("Test", 2017));
 	}
     
+    @Test
     public void testCapacity3() {
     		this.admin.createClass("Test", 2017, "Instructor", 1);
 		this.student.registerForClass("Student1", "Test", 2017);

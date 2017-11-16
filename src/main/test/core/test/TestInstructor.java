@@ -34,6 +34,7 @@ public class TestInstructor {
     }
     
     //test case for assigning hw for a class in different year 
+    @Test
     public void invalidYear() {
         this.admin.createClass("ECS161", 2017, "Instructor", 15);
 		this.instructor.addHomework("Instructor", "ECS161", 2016, "HW1");
@@ -41,6 +42,7 @@ public class TestInstructor {
     }
     
     //test case for class that does not exist 
+    @Test
     public void invalidClass() {
     		this.instructor.addHomework("Instructor", "ECS161", 2016, "HW1");
 		assertFalse(this.instructor.homeworkExists("ECS161", 2017, "HW1"));
@@ -70,7 +72,7 @@ public class TestInstructor {
 		this.student.registerForClass("Student", "ECS161", 2017);
     		this.instructor.addHomework("Instructor", "ECS161", 2017, "HW1");
     		this.student.submitHomework("Student", "HW1", "answer", "ECS161", 2017);
-    		this.instructor.assignGrade("Instructor1", "ECS161", 2017, "HW1", "Student", 90);
+    		this.instructor.assignGrade("Instructor", "ECS161", 2017, "HW1", "Student", 90);
     		assertEquals(new Integer(90), this.instructor.getGrade("ECS161", 2017, "HW1", "Student"));
     }
     
@@ -80,7 +82,7 @@ public class TestInstructor {
     		this.admin.createClass("ECS161", 2017, "Instructor", 15);
 		this.student.registerForClass("Student", "ECS161", 2017);
     		this.instructor.addHomework("Instructor", "ECS161", 2017, "HW1");
-    		this.instructor.assignGrade("Instructor1", "ECS161", 2017, "HW1", "Student", 90);
+    		this.instructor.assignGrade("Instructor", "ECS161", 2017, "HW1", "Student", 90);
     		assertEquals(new Integer(90), this.instructor.getGrade("ECS161", 2017, "HW1", "Student"));
     }
     
@@ -90,7 +92,7 @@ public class TestInstructor {
     public void testGradedHW3() {
     		this.admin.createClass("ECS161", 2017, "Instructor", 15);
     		this.instructor.addHomework("Instructor", "ECS161", 2017, "HW1");
-    		this.instructor.assignGrade("Instructor1", "ECS161", 2017, "HW1", "Student", 90);
+    		this.instructor.assignGrade("Instructor", "ECS161", 2017, "HW1", "Student", 90);
     		assertNull(this.instructor.getGrade("ECS161", 2017, "HW1", "Student"));
     }
 

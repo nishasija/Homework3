@@ -76,7 +76,7 @@ public class TestStudent {
 		assertFalse(this.student.hasSubmitted("Student", "HW1", "ECS161", 2017));
 	}
 	
-	//test case for student not registered 
+	//test case for any student not registered 
 	@Test
 	public void testSubmitHW3() {
 		this.admin.createClass("ECS161", 2017, "Instructor", 15);
