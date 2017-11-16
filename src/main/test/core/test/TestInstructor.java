@@ -63,7 +63,7 @@ public class TestInstructor {
 		assertFalse(this.instructor.homeworkExists("ECS161", 2017, "HW"));
 	}
     
-    //base case for assigned grade
+    //base case for assigned grade 
     @Test 
     public void testGradedHW() {
     		this.admin.createClass("ECS161", 2017, "Instructor", 15);

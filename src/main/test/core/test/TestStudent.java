@@ -90,8 +90,8 @@ public class TestStudent {
 	public void testSubmitHW4() {
 		this.admin.createClass("ECS161", 2018, "Instructor", 15);
 		this.instructor.addHomework("Instructor", "ECS161", 2018, "HW1");
-		this.student.registerForClass("Student", "ECS161", 2017);
-		this.student.submitHomework("Student", "HW1", "answer", "ECS161", 2017);
-		assertFalse(this.student.hasSubmitted("Student", "HW1", "ECS161", 2017));
+		this.student.registerForClass("Student", "ECS161", 2018);
+		this.student.submitHomework("Student", "HW1", "answer", "ECS161", 2018);
+		assertFalse(this.student.hasSubmitted("Student", "HW1", "ECS161", 2018));
 	}
 }

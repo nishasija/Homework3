@@ -65,7 +65,6 @@ public class TestAdmin {
 		assertEquals(15,this.admin.getClassCapacity("Test", 2017));
     }
     
-    
     @Test
     public void cornerCaseCapacity() {
     		this.admin.createClass("Test", 2017, "Instructor", -1);
