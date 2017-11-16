@@ -85,7 +85,7 @@ public class TestStudent {
 		assertFalse(this.student.hasSubmitted("Student", "HW1", "ECS161", 2017));
 	}
 	
-	//test case for different year
+	//test case for a different year
 	@Test
 	public void testSubmitHW4() {
 		this.admin.createClass("ECS161", 2018, "Instructor", 15);

@@ -59,7 +59,7 @@ public class TestAdmin {
     		assertFalse(this.admin.classExists("Test3", 2017));
     }
     
-    //testing for class capacity 
+    //testing for class capacities 
     @Test
     public void invalidClassCapacity() {
 		this.admin.changeCapacity("Test", 2017, 2);

@@ -76,7 +76,7 @@ public class TestInstructor {
     		assertEquals(new Integer(90), this.instructor.getGrade("ECS161", 2017, "HW1", "Student"));
     }
     
-    //test assigned grade for student who did not submit hw
+    //test assigned grade for a student who did not submit hw
     @Test 
     public void testGradedHW2() {
     		this.admin.createClass("ECS161", 2017, "Instructor", 15);
