@@ -41,7 +41,7 @@ public interface IStudent {
     /**
      * @return Whether student {@code studentName} is registered for this class
      */
-    boolean isRegisteredFor(String studentName, String className, int year);
+    boolean isRegisteredFor(String studentName, String className, int i);
 
     /**
      * @return Whether student {@code studentName} has submitted homework {@code homeworkName} for this class

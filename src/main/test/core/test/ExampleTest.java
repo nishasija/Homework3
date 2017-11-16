@@ -25,6 +25,11 @@ public class ExampleTest {
         assertTrue(this.admin.classExists("Test", 2017));
     }
 
+    //created an invalid class to test the condition
+    //implication is wrong because it outputs what we want 
+    
+    //any label we label as Test, Junit would cover it 
+    
     @Test
     public void testMakeClass2() {
         this.admin.createClass("Test", 2016, "Instructor", 15);
